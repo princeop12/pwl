@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PEACE PROTOCOL WAITLIST - Success</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background"></div>
+    <div class="container">
+        <div class="social-details">
+            <h1>Official Handles</h1>
+        </div>
+        <div class="social-links">
+            <a href="https://x.com/Peace_Protocol?t=Irhl2CrujFBxoaajm8Ix1A&s=09" target="_blank"><img src="x-logo.svg" alt="X Logo"></a>
+            <a href="https://t.me/peacecoin01" target="_blank"><img src="telegram-logo.svg" alt="Telegram Logo"></a>
+            <a href="https://discord.gg/8Hgu8nfv" target="_blank"><img src="discord-logo.svg" alt="Discord Logo"></a>
+        </div>
+
+        <div class="header">
+            <h1>PEACE PROTOCOL WAITLIST</h1>
+            <p>USERS ON WAITLIST: <span id="totalUsers">0</span></p>
+        </div>
+
+        <div class="success-section">
+            <h3>Welcome to the Wait-List!</h3>
+            <p><strong>Email:</strong> <span id="userEmail"></span></p>
+            <p><strong>Solana Wallet Address:</strong> <span id="solanaWallet"></span></p>
+            <p><strong>Ton Wallet Address:</strong> <span id="tonWallet"></span></p>
+            <p><strong>Your Referral Link:</strong></p>
+            <input type="text" id="referralLink" readonly>
+            <button onclick="copyReferralLink()"><span>Copy</span></button>
+            <br>
+            <p class="social-text">FOLLOW OUR TWITTER</p>
+            <button onclick="window.location.href='https://x.com/Peace_Protocol?t=Irhl2CrujFBxoaajm8Ix1A&s=09'"><span>FOLLOW</span></button>
+            <br>
+            <p class="social-text">JOIN OUR TELEGRAM</p>
+            <button onclick="window.location.href='https://t.me/peacecoin01'"><span>JOIN</span></button>
+            <br>
+            <p class="social-text">JOIN DISCORD SERVER</p>
+            <button onclick="window.location.href='https://discord.gg/8Hgu8nfv'"><span>JOIN</span></button>
+        </div>
+
+        <div class="animated-text" id="animatedText">
+            <span>I</span><span>n</span><span>t</span><span>a</span><span>r</span><span>a</span><span>c</span><span>t</span>
+            <span> </span>
+            <span>w</span><span>i</span><span>t</span><span>h</span>
+            <span> </span>
+            <span>d</span><span>A</span><span>p</span><span>p</span><span>s</span>
+            <span> </span>
+            <span>&</span>
+            <span> </span>
+            <span>m</span><span>a</span><span>n</span><span>a</span><span>g</span><span>e</span>
+            <span> </span>
+            <span>y</span><span>o</span><span>u</span><span>r</span>
+            <span> </span>
+            <span>d</span><span>i</span><span>g</span><span>i</span><span>t</span><span>a</span><span>l</span>
+            <span> </span>
+            <span>a</span><span>s</span><span>s</span><span>e</span><span>t</span><span>s</span>
+            <span> </span>
+            <span>a</span><span>c</span><span>r</span><span>o</span><span>s</span><span>s</span>
+            <span> </span>
+            <span>M</span><span>u</span><span>l</span><span>t</span><span>i</span><span>-</span><span>c</span><span>h</span><span>a</span><span>i</span><span>n</span>
+            <span> </span>
+            <span>P</span><span>e</span><span>a</span><span>c</span><span>e</span><span>f</span><span>u</span><span>l</span><span>l</span><span>y</span>
+        </div>
+
+        <div class="progress-box">
+            <div class="peace-symbol">
+                <div class="main-circle"></div>
+                <div class="circle top">
+                    <div class="padlock">🔓</div>
+                </div>
+                <div class="circle center">
+                    <div class="user-position" id="userPosition">0</div>
+                </div>
+                <div class="circle left">
+                    <div class="max-users" id="maxUsers">20K MAX</div>
+                </div>
+                <div class="circle right">
+                    <div class="max-refs" id="maxRefs">20 MAX</div>
+                </div>
+                <p class="top-text">WAIT-LIST OPEN</p>
+                <p class="left-text">NO OF USERS</p>
+                <p class="right-text">YOUR INVITES</p>
+                <canvas id="progressCanvas" class="progress-canvas"></canvas>
+            </div>
+        </div>
+
+        <div class="dual-milestones">
+            <div class="users-milestones">
+                <h4>Users</h4>
+                <div class="milestone">
+                    <div class="circle pending" id="users-1k">
+                        <span class="checkmark" id="users1kCheckmark">✔</span>
+                    </div>
+                    <p>1K Users</p>
+                </div>
+                <div class="milestone-line"></div>
+                <div class="milestone">
+                    <div class="circle pending" id="users-3k">
+                        <span class="checkmark" id="users3kCheckmark">✔</span>
+                    </div>
+                    <p>3K Users</p>
+                </div>
+                <div class="milestone-line"></div>
+                <div class="milestone">
+                    <div class="circle pending" id="users-5k">
+                        <span class="checkmark" id="users5kCheckmark">✔</span>
+                    </div>
+                    <p>5K Users</p>
+                </div>
+                <div class="milestone-line"></div>
+                <div class="milestone">
+                    <div class="circle pending" id="users-10k">
+                        <span class="checkmark" id="users10kCheckmark">✔</span>
+                    </div>
+                    <p>10K Users</p>
+                </div>
+                <div class="milestone-line"></div>
+                <div class="milestone">
+                    <div class="circle pending" id="users-20k">
+                        <span class="checkmark" id="users20kCheckmark">✔</span>
+                    </div>
+                    <p>20K Users</p>
+                </div>
+            </div>
+
+            <div class="invites-milestones">
+                <h4>Invites</h4>
+                <div class="milestone">
+                    <div class="circle pending" id="invites-1">
+                        <span class="checkmark" id="invites1Checkmark">✔</span>
+                    </div>
+                    <p>Invite 1 User</p>
+                </div>
+                <div class="milestone-line"></div>
+                <div class="milestone">
+                    <div class="circle pending" id="invites-3">
+                        <span class="checkmark" id="invites3Checkmark">✔</span>
+                    </div>
+                    <p>Invite 3 Users</p>
+                </div>
+                <div class="milestone-line"></div>
+                <div class="milestone">
+                    <div class="circle pending" id="invites-5">
+                        <span class="checkmark" id="invites5Checkmark">✔</span>
+                    </div>
+                    <p>Invite 5 Users</p>
+                </div>
+                <div class="milestone-line"></div>
+                <div class="milestone">
+                    <div class="circle pending" id="invites-10">
+                        <span class="checkmark" id="invites10Checkmark">✔</span>
+                    </div>
+                    <p>Invite 10 Users</p>
+                </div>
+                <div class="milestone-line"></div>
+                <div class="milestone">
+                    <div class="circle pending" id="invites-20">
+                        <span class="checkmark" id="invites20Checkmark">✔</span>
+                    </div>
+                    <p>Invite 20 Users</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const email = urlParams.get('email');
+        const solanaWallet = urlParams.get('solanaWallet');
+        const tonWallet = urlParams.get('tonWallet');
+        const referralLink = urlParams.get('referralLink');
+        let userPosition = parseInt(urlParams.get('position')) || 0;
+    
+        let currentUsers = 0;
+        let currentReferrals = 0;
+        const maxUsers = 20000;
+        const maxReferrals = 20;
+    
+        let gradientOffset = 0;
+    
+        const canvas = document.getElementById('progressCanvas');
+        const ctx = canvas.getContext('2d');
+    
+        const peaceSymbol = document.querySelector('.peace-symbol');
+        const resizeCanvas = () => {
+            const size = peaceSymbol.offsetWidth;
+            canvas.width = size;
+            canvas.height = size;
+        };
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+    
+        function formatNumber(num) {
+            if (num >= 1000) {
+                return (num / 1000).toFixed(1) + 'K';
+            }
+            return num.toString();
+        }
+    
+        function drawProgress() {
+            const size = canvas.width;
+            const centerX = size / 2;
+            const centerY = size / 2;
+            const ringRadius = (size / 2) - 12;
+            const ringThickness = 24;
+    
+            ctx.clearRect(0, 0, size, size);
+    
+            const userProgress = currentUsers / maxUsers;
+            const referralProgress = currentReferrals / maxReferrals;
+    
+            gradientOffset = (gradientOffset + 0.02) % 1;
+    
+            ctx.shadowColor = '#A855F7';
+            ctx.shadowBlur = 10;
+    
+            const userAngle = (Math.PI * (125 / 180)) * userProgress;
+            const userGradient = ctx.createLinearGradient(0, 0, size, size);
+            userGradient.addColorStop((0 + gradientOffset) % 1, '#A855F7');
+            userGradient.addColorStop((0.5 + gradientOffset) % 1, '#6A0DAD');
+            userGradient.addColorStop((1 + gradientOffset) % 1, '#A855F7');
+            ctx.beginPath();
+            ctx.lineWidth = ringThickness;
+            ctx.strokeStyle = userGradient;
+            ctx.arc(centerX, centerY, ringRadius, -Math.PI / 2, -Math.PI / 2 - userAngle, true);
+            ctx.stroke();
+    
+            const referralAngle = (Math.PI * (125 / 180)) * referralProgress;
+            const referralGradient = ctx.createLinearGradient(size, 0, 0, size);
+            referralGradient.addColorStop((0 + gradientOffset) % 1, '#A855F7');
+            referralGradient.addColorStop((0.5 + gradientOffset) % 1, '#6A0DAD');
+            referralGradient.addColorStop((1 + gradientOffset) % 1, '#A855F7');
+            ctx.beginPath();
+            ctx.lineWidth = ringThickness;
+            ctx.strokeStyle = referralGradient;
+            ctx.arc(centerX, centerY, ringRadius, -Math.PI / 2, -Math.PI / 2 + referralAngle, false);
+            ctx.stroke();
+    
+            ctx.shadowBlur = 0;
+            ctx.shadowColor = 'transparent';
+    
+            document.getElementById('userPosition').textContent = formatNumber(Math.round(userPosition));
+
+            if (currentUsers >= maxUsers) {
+                document.getElementById('maxUsers').classList.add('completed');
+            }
+    
+            if (currentReferrals >= maxReferrals) {
+                document.getElementById('maxRefs').classList.add('completed');
+            }
+    
+            document.getElementById('users1kCheckmark').style.opacity = currentUsers >= 1000 ? '1' : '0';
+            document.getElementById('users3kCheckmark').style.opacity = currentUsers >= 3000 ? '1' : '0';
+            document.getElementById('users5kCheckmark').style.opacity = currentUsers >= 5000 ? '1' : '0';
+            document.getElementById('users10kCheckmark').style.opacity = currentUsers >= 10000 ? '1' : '0';
+            document.getElementById('users20kCheckmark').style.opacity = currentUsers >= 20000 ? '1' : '0';
+    
+            document.getElementById('invites1Checkmark').style.opacity = currentReferrals >= 1 ? '1' : '0';
+            document.getElementById('invites3Checkmark').style.opacity = currentReferrals >= 3 ? '1' : '0';
+            document.getElementById('invites5Checkmark').style.opacity = currentReferrals >= 5 ? '1' : '0';
+            document.getElementById('invites10Checkmark').style.opacity = currentReferrals >= 10 ? '1' : '0';
+            document.getElementById('invites20Checkmark').style.opacity = currentReferrals >= 20 ? '1' : '0';
+        }
+    
+        // Display wallets
+        document.getElementById('userEmail').textContent = email || 'Not provided';
+        document.getElementById('solanaWallet').textContent = solanaWallet && solanaWallet !== 'null' && solanaWallet.trim() ? solanaWallet : 'Not provided';
+        document.getElementById('tonWallet').textContent = tonWallet && tonWallet !== 'null' && tonWallet.trim() ? tonWallet : 'Not provided';
+        document.getElementById('referralLink').value = referralLink || 'Not available';
+    
+        function copyReferralLink() {
+            const referralInput = document.getElementById('referralLink');
+            referralInput.select();
+            document.execCommand('copy');
+            alert('Referral link copied to clipboard!');
+        }
+    
+        function updateTotalUsers() {
+            fetch('/api/user-data', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ refEmail: null, currentEmail: email })
+            })
+                .then(response => response.json())
+                .then(data => {
+                    console.log('User Data:', data);
+                    currentUsers = data.totalUsers;
+                    currentReferrals = data.referrals[email] || 0;
+                    document.getElementById('totalUsers').textContent = currentUsers;
+                    drawProgress();
+                })
+                .catch(error => console.error('Error fetching user data:', error));
+        }
+    
+        window.addEventListener('scroll', function() {
+            const background = document.querySelector('.background');
+            const scrollPosition = window.scrollY;
+            background.style.transform = `translateY(${scrollPosition * 0.2}px)`;
+        });
+    
+        function animateGlitter() {
+            drawProgress();
+            requestAnimationFrame(animateGlitter);
+        }
+    
+        const textSpans = document.querySelectorAll('#animatedText span');
+        function animateText() {
+            setTimeout(() => {
+                textSpans.forEach((span, index) => {
+                    setTimeout(() => {
+                        span.classList.add('transition-in');
+                    }, index * 70);
+                });
+            }, 3000);
+    
+            setTimeout(() => {
+                textSpans.forEach((span, index) => {
+                    setTimeout(() => {
+                        span.classList.remove('transition-in');
+                    }, index * 70);
+                });
+            }, 8000);
+    
+            setTimeout(animateText, 11000);
+        }
+    
+        animateText();
+        updateTotalUsers();
+        animateGlitter();
+    </script>
+</body>
+</html>
